@@ -19,6 +19,9 @@ h1, h2, h3, h4, h5, h6 {
 .bg-three {
   background-color: #1EB7FA; }
 
+.bg-one-dark {
+  background-color: #0b214b; }
+
 .pt-6 {
   padding-top: 6rem; }
 
@@ -30,6 +33,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .color-one {
   color: #1b376a; }
+
+.color-white {
+  color: #ffffff; }
+
+.position-relative {
+  position: relative; }
+
+.position-absolute {
+  position: absolute; }
 
 .bg-image, .bg-image-paralax {
   background-repeat: no-repeat;
@@ -115,6 +127,17 @@ h1, h2, h3, h4, h5, h6 {
   .form-white .form-control::placeholder {
     color: #ffffff;
     opacity: 1; }
+
+.form-white .custom-file-label {
+  padding: .375rem .75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #0b214b;
+  border: 0.1rem solid #ffffff;
+  border-radius: .25rem; }
+  .form-white .custom-file-label::after {
+    content: "Buscar"; }
 
 /*======================================
 //--//-->   ICON
@@ -446,3 +469,89 @@ footer .tbk img {
   background-color: #EFEFEF; }
   .process .ico-box {
     width: 5rem; }
+
+/*======================================
+//--//-->   PROMOTIONAL
+======================================*/
+.message-text {
+  color: #ffffff;
+  font-size: 1.2rem; }
+
+.process-promotional .subtitle {
+  font-size: 1.6rem; }
+
+.process-promotional .process-content-box .content {
+  list-style: none; }
+
+.process-promotional .process-content-box .content .content-list::before {
+  content: "\2022";
+  color: #1EB7FA;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  margin-bottom: .6rem; }
+
+.process-promotional .process-content-box .sub-list li {
+  list-style-type: none;
+  margin-bottom: .1rem; }
+
+.contact-promotional {
+  color: #ffffff; }
+  .contact-promotional .title {
+    color: #ffffff; }
+  .contact-promotional .info {
+    font-size: 1.7rem; }
+  .contact-promotional .info-2 {
+    font-size: 1.5rem; }
+
+/*======================================
+//--//-->   WORK
+======================================*/
+.contact-work {
+  color: #ffffff; }
+  .contact-work .title {
+    color: #ffffff; }
+  .contact-work .info {
+    font-size: 1.7rem; }
+  .contact-work .info-2 {
+    font-size: 1.5rem; }
+
+/*======================================
+//--//-->   COURSES
+======================================*/
+.info-box-course {
+  font-size: 1.3rem; }
+
+.table-gray-two {
+  background-color: #EFEFEF;
+  color: #1b376a;
+  border: 2px solid #ffffff; }
+  .table-gray-two .title {
+    font-size: 2rem; }
+  .table-gray-two .label-cell {
+    text-align: center;
+    transform: rotate(-90deg);
+    height: 130px;
+    font-weight: bold; }
+  .table-gray-two .label-box {
+    width: 100px;
+    height: 180px; }
+  .table-gray-two .label-span {
+    display: inline-block;
+    bottom: 0;
+    margin: 0 0 20px 10px;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg);
+    transform-origin: left;
+    font-size: 20px;
+    font-size: 1.11111rem;
+    text-align: left;
+    white-space: nowrap; }
+  .table-gray-two td, .table-gray-two th {
+    vertical-align: inherit;
+    border: 4px solid #ffffff; }
+  .table-gray-two .wd {
+    width: 4rem; }
