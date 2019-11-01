@@ -103,10 +103,85 @@ h1,h2,h3,h4,h5,h6 {
         background-color: $color-shadow; 
     }
 }
+
+/*======================================
+//--//-->   FORM
+======================================*/
+.form-white, .wpcf7 {
+    // .form-control {
+    //     color: $white;
+    //     background-color: $color-one-dark;
+    //     border: .1rem solid $white;
+    //     &:focus {
+    //         color: $white;
+    //         background-color: $color-one-dark;
+    //         border-color: $color-one;
+    //         outline: 0;
+    //         // Avoid using mixin so we can pass custom focus shadow properly
+    //         /*@if $enable-shadows {
+    //           box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    //         } @else {
+    //           box-shadow: $input-focus-box-shadow;
+    //         }*/
+    //     }
+    //     // Placeholder
+    //     &::placeholder {
+    //       color: $white;
+    //       opacity: 1;
+    //     }    
+    // }
+    max-width: none;
+    .custom-file-label {
+        padding: .375rem .75rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $white;
+        background-color: $color-one-dark;
+        border: .1rem solid $white;
+        border-radius: .25rem;
+        &::after {
+            content: "Buscar";
+        }
+    }
+}
+.form-control, .wpcf7 .wpcf7-validation-errors, .wpcf7 input[type=color], .wpcf7 input[type=date], .wpcf7 input[type=datetime-local], .wpcf7 input[type=datetime], .wpcf7 input[type=email], .wpcf7 input[type=file], .wpcf7 input[type=month], .wpcf7 input[type=number], .wpcf7 input[type=range], .wpcf7 input[type=search], .wpcf7 input[type=tel], .wpcf7 input[type=text], .wpcf7 input[type=time], .wpcf7 input[type=url], .wpcf7 input[type=week], .wpcf7 select, .wpcf7 textarea {
+        color: $white;
+        background-color: $color-one-dark;
+        border: .1rem solid $white;
+        height: auto;
+        padding: .5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        border-radius: .3rem;
+        -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+        transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+
+    &:focus {
+        color: $white;
+        background-color: $color-one-dark;
+        border-color: $color-one;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(124,0,140, 0);
+        // Avoid using mixin so we can pass custom focus shadow properly
+        /*@if $enable-shadows {
+          box-shadow: $input-box-shadow, $input-focus-box-shadow;
+        } @else {
+          box-shadow: $input-focus-box-shadow;
+        }*/
+    }
+    // Placeholder
+    &::placeholder {
+      color: $white;
+      opacity: 1;
+    } 
+}
+
 /*======================================
 //--//-->   BUTTON
 ======================================*/
-.btn-big {
+.btn-big, .wpcf7 input[type=submit] {
     background-color: white;
     color: $color-one;
     border-radius: 4rem;
@@ -115,6 +190,8 @@ h1,h2,h3,h4,h5,h6 {
     box-shadow:  $shadow-one;
     font-size: 1.6rem;
     padding: .4rem 2.3rem;
+    height: auto;
+    width: auto;
     &:hover {
         background-color: $color-one;
         border-color: $color-one;
@@ -132,46 +209,6 @@ h1,h2,h3,h4,h5,h6 {
     padding: .3rem 2rem;
     font-size: 1.2rem;    
     border-color: $color-one
-}
-
-/*======================================
-//--//-->   FORM
-======================================*/
-.form-white {
-    .form-control {
-        color: $white;
-        background-color: $color-one-dark;
-        border: .1rem solid $white;
-        &:focus {
-            color: $white;
-            background-color: $color-one-dark;
-            border-color: $color-one;
-            outline: 0;
-            // Avoid using mixin so we can pass custom focus shadow properly
-            /*@if $enable-shadows {
-              box-shadow: $input-box-shadow, $input-focus-box-shadow;
-            } @else {
-              box-shadow: $input-focus-box-shadow;
-            }*/
-        }
-        // Placeholder
-        &::placeholder {
-          color: $white;
-          opacity: 1;
-        }    
-    }
-    .custom-file-label {
-        padding: .375rem .75rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: $white;
-        background-color: $color-one-dark;
-        border: .1rem solid $white;
-        border-radius: .25rem;
-        &::after {
-            content: "Buscar";
-        }
-    }
 }
 /*======================================
 //--//-->   ICON
@@ -369,20 +406,26 @@ h1,h2,h3,h4,h5,h6 {
         .owl-dots {
             .owl-dot {
                 span {
-                    background: $color-three;
-                    border: 0px solid $color-three;
+                    background: $color-one;
+                    border: 0px solid $color-one;
+                }
+                
+                &.active { 
+                    span {
+                        background-color: $color-three;                 
+                    }
                 }
             }
         }
         .owl-nav {
             .owl-prev, .owl-next {
-                background-color: $white;
-                color: $color-one;
-                border-color: $white;
+                background-color: $color-one;
+                color: $white;
+                border-color: $color-one;
                 border-radius: 0;
                 &:hover {
-                    background-color: $white;
-                    color: $color-one;
+                    background-color: $color-one;
+                    color: $white;
                 }
             }
         }        
@@ -491,8 +534,11 @@ h1,h2,h3,h4,h5,h6 {
             .ico {
                 border: .3rem solid $white;
                 border-radius: 50%;
-                width: 200px;
-                height: 200px;
+                width: 150px;
+                height: 150px;
+            }
+            .ico-img {
+                width: 70px;
             }
         }
         .title {
@@ -551,10 +597,10 @@ h1,h2,h3,h4,h5,h6 {
 //--//-->   TESTIMONIALS
 ======================================*/
 .testimonial-main {
-    background-color: $color-one;
-    color: $white;
+    background-color: $white;
+    color: $color-one;
     .title {
-        color: $white;
+        color: $color-one;
     }
     .testimonial-footer, .title {
         font-weight: bold;
@@ -605,6 +651,22 @@ footer {
 ======================================*/
 .staff {
     background-color: $gray;
+    .card {
+        background-color: $gray;
+        border: 0;
+        text-align: center;
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+        margin-bottom: .5rem;
+    }
+}
+[data-toggle="collapse"] {
+    &.collapsed .if-not-collapsed {
+         display: none;
+    }
+    &:not(.collapsed) .if-collapsed {
+         display: none;
+    }
 }
 /*======================================
 //--//-->   CURSOS
@@ -655,6 +717,21 @@ footer {
                 list-style-type: none;                
                 margin-bottom: .1rem;
             }
+        }
+    }
+}
+.promotional-ul {    
+    list-style: none;
+    li {
+        font-size: 1.1rem;
+        &::before {
+        content: "\2022";  
+        color: $color-three; 
+        font-weight: bold; 
+        display: inline-block; 
+        width: 1em; 
+        margin-left: -1em; 
+        margin-bottom: .6rem;
         }
     }
 }
@@ -732,3 +809,5 @@ footer {
         width: 4rem;
     }
 }
+
+

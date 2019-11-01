@@ -80,9 +80,53 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(11, 33, 75, 0.6); }
 
 /*======================================
+//--//-->   FORM
+======================================*/
+.form-white, .wpcf7 {
+  max-width: none; }
+  .form-white .custom-file-label, .wpcf7 .custom-file-label {
+    padding: .375rem .75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffff;
+    background-color: #0b214b;
+    border: 0.1rem solid #ffffff;
+    border-radius: .25rem; }
+    .form-white .custom-file-label::after, .wpcf7 .custom-file-label::after {
+      content: "Buscar"; }
+
+.form-control, .wpcf7 .wpcf7-validation-errors, .wpcf7 input[type=color], .wpcf7 input[type=date], .wpcf7 input[type=datetime-local], .wpcf7 input[type=datetime], .wpcf7 input[type=email], .wpcf7 input[type=file], .wpcf7 input[type=month], .wpcf7 input[type=number], .wpcf7 input[type=range], .wpcf7 input[type=search], .wpcf7 input[type=tel], .wpcf7 input[type=text], .wpcf7 input[type=time], .wpcf7 input[type=url], .wpcf7 input[type=week], .wpcf7 select, .wpcf7 textarea {
+  color: #ffffff;
+  background-color: #0b214b;
+  border: 0.1rem solid #ffffff;
+  height: auto;
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out; }
+  .form-control:focus, .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 input[type=color]:focus, .wpcf7 input[type=date]:focus, .wpcf7 input[type=datetime-local]:focus, .wpcf7 input[type=datetime]:focus, .wpcf7 input[type=email]:focus, .wpcf7 input[type=file]:focus, .wpcf7 input[type=month]:focus, .wpcf7 input[type=number]:focus, .wpcf7 input[type=range]:focus, .wpcf7 input[type=search]:focus, .wpcf7 input[type=tel]:focus, .wpcf7 input[type=text]:focus, .wpcf7 input[type=time]:focus, .wpcf7 input[type=url]:focus, .wpcf7 input[type=week]:focus, .wpcf7 select:focus, .wpcf7 textarea:focus {
+    color: #ffffff;
+    background-color: #0b214b;
+    border-color: #1b376a;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(124, 0, 140, 0);
+    /*@if $enable-shadows {
+          box-shadow: $input-box-shadow, $input-focus-box-shadow;
+        } @else {
+          box-shadow: $input-focus-box-shadow;
+        }*/ }
+  .form-control::placeholder, .wpcf7 .wpcf7-validation-errors::placeholder, .wpcf7 input[type=color]::placeholder, .wpcf7 input[type=date]::placeholder, .wpcf7 input[type=datetime-local]::placeholder, .wpcf7 input[type=datetime]::placeholder, .wpcf7 input[type=email]::placeholder, .wpcf7 input[type=file]::placeholder, .wpcf7 input[type=month]::placeholder, .wpcf7 input[type=number]::placeholder, .wpcf7 input[type=range]::placeholder, .wpcf7 input[type=search]::placeholder, .wpcf7 input[type=tel]::placeholder, .wpcf7 input[type=text]::placeholder, .wpcf7 input[type=time]::placeholder, .wpcf7 input[type=url]::placeholder, .wpcf7 input[type=week]::placeholder, .wpcf7 select::placeholder, .wpcf7 textarea::placeholder {
+    color: #ffffff;
+    opacity: 1; }
+
+/*======================================
 //--//-->   BUTTON
 ======================================*/
-.btn-big {
+.btn-big, .wpcf7 input[type=submit] {
   background-color: white;
   color: #1b376a;
   border-radius: 4rem;
@@ -90,11 +134,13 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #ffffff;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15), 0 2px 10px 0 rgba(0, 0, 0, 0.11);
   font-size: 1.6rem;
-  padding: .4rem 2.3rem; }
-  .btn-big:hover {
+  padding: .4rem 2.3rem;
+  height: auto;
+  width: auto; }
+  .btn-big:hover, .wpcf7 input[type=submit]:hover {
     background-color: #1b376a;
     border-color: #1b376a; }
-  .btn-big:focus {
+  .btn-big:focus, .wpcf7 input[type=submit]:focus {
     box-shadow: 0 0 0 0.2rem rgba(27, 55, 106, 0.5); }
 
 .btn-big-lg {
@@ -106,38 +152,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: .3rem 2rem;
   font-size: 1.2rem;
   border-color: #1b376a; }
-
-/*======================================
-//--//-->   FORM
-======================================*/
-.form-white .form-control {
-  color: #ffffff;
-  background-color: #0b214b;
-  border: 0.1rem solid #ffffff; }
-  .form-white .form-control:focus {
-    color: #ffffff;
-    background-color: #0b214b;
-    border-color: #1b376a;
-    outline: 0;
-    /*@if $enable-shadows {
-              box-shadow: $input-box-shadow, $input-focus-box-shadow;
-            } @else {
-              box-shadow: $input-focus-box-shadow;
-            }*/ }
-  .form-white .form-control::placeholder {
-    color: #ffffff;
-    opacity: 1; }
-
-.form-white .custom-file-label {
-  padding: .375rem .75rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #ffffff;
-  background-color: #0b214b;
-  border: 0.1rem solid #ffffff;
-  border-radius: .25rem; }
-  .form-white .custom-file-label::after {
-    content: "Buscar"; }
 
 /*======================================
 //--//-->   ICON
@@ -281,17 +295,20 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #1b376a; }
 
 .testimonials .owl-arrow .owl-dots .owl-dot span {
-  background: #1EB7FA;
-  border: 0px solid #1EB7FA; }
+  background: #1b376a;
+  border: 0px solid #1b376a; }
+
+.testimonials .owl-arrow .owl-dots .owl-dot.active span {
+  background-color: #1EB7FA; }
 
 .testimonials .owl-arrow .owl-nav .owl-prev, .testimonials .owl-arrow .owl-nav .owl-next {
-  background-color: #ffffff;
-  color: #1b376a;
-  border-color: #ffffff;
+  background-color: #1b376a;
+  color: #ffffff;
+  border-color: #1b376a;
   border-radius: 0; }
   .testimonials .owl-arrow .owl-nav .owl-prev:hover, .testimonials .owl-arrow .owl-nav .owl-next:hover {
-    background-color: #ffffff;
-    color: #1b376a; }
+    background-color: #1b376a;
+    color: #ffffff; }
 
 .testimonials .owl-arrow .owl-prev {
   left: -5px; }
@@ -372,8 +389,10 @@ h1, h2, h3, h4, h5, h6 {
   .course .course-box .ico-box .ico {
     border: 0.3rem solid #ffffff;
     border-radius: 50%;
-    width: 200px;
-    height: 200px; }
+    width: 150px;
+    height: 150px; }
+  .course .course-box .ico-box .ico-img {
+    width: 70px; }
   .course .course-box .title {
     color: #ffffff;
     font-weight: bold;
@@ -414,10 +433,10 @@ h1, h2, h3, h4, h5, h6 {
 //--//-->   TESTIMONIALS
 ======================================*/
 .testimonial-main {
-  background-color: #1b376a;
-  color: #ffffff; }
+  background-color: #ffffff;
+  color: #1b376a; }
   .testimonial-main .title {
-    color: #ffffff; }
+    color: #1b376a; }
   .testimonial-main .testimonial-footer, .testimonial-main .title {
     font-weight: bold; }
 
@@ -458,6 +477,19 @@ footer .tbk img {
 ======================================*/
 .staff {
   background-color: #EFEFEF; }
+  .staff .card {
+    background-color: #EFEFEF;
+    border: 0;
+    text-align: center;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    margin-bottom: .5rem; }
+
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+  display: none; }
+
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none; }
 
 /*======================================
 //--//-->   CURSOS
@@ -495,6 +527,19 @@ footer .tbk img {
 .process-promotional .process-content-box .sub-list li {
   list-style-type: none;
   margin-bottom: .1rem; }
+
+.promotional-ul {
+  list-style: none; }
+  .promotional-ul li {
+    font-size: 1.1rem; }
+    .promotional-ul li::before {
+      content: "\2022";
+      color: #1EB7FA;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+      margin-bottom: .6rem; }
 
 .contact-promotional {
   color: #ffffff; }
